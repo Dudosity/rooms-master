@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import {APIService} from '../api.service';
 
 @Component({
@@ -10,6 +11,7 @@ export class RoomsComponent implements OnInit {
   rooms_object: any;
   rooms_object_n1: any;
   rooms_big_object: any;
+
   constructor(private api: APIService) { }
 
   ngOnInit(): void {

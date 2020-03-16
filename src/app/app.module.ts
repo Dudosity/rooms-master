@@ -17,6 +17,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatMenuModule} from '@angular/material/menu';
 import { FooterComponent } from './footer/footer.component';
 import { AdLineComponent } from './ad-line/ad-line.component';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 const appRoutes: Routes =[
   { path: '', component: AppComponent}
@@ -39,6 +40,7 @@ const appRoutes: Routes =[
     MatCardModule,
     MatIconModule,
     MatMenuModule,
+    MatPaginatorModule,
     MatToolbarModule,
     MatSelectModule,
     RouterModule.forRoot(
