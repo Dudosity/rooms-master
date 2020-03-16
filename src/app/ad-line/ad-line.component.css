@@ -1,0 +1,23 @@
+.block{
+  height: 30px;
+
+  margin:0 auto;
+}
+.block p{
+  text-align:center;
+  color: #4150a3;
+  text-transform: uppercase;
+  padding-top: 5px;
+  animation: text 15s infinite linear;
+  padding-left: 100%;
+  white-space: nowrap;
+}
+@keyframes text {
+  0%{
+    transform: translate(0, 0);
+  }
+
+  100%{
+    transform: translate(-160%, 0);
+  }
+}

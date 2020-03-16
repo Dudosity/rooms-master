@@ -1,0 +1,14 @@
+<div class="row row-cols-1 row-cols-md-3" >
+  <div *ngFor="let i of hotels_object"  class="col mb-4 ">
+    <div class="card h-100 shadow-sm ">
+      <img src="https:{{i['picture']['list'][0]}}" style="  object-fit: cover; height: 300px;" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title">{{i['base']['hotelName'].substring(0, 25)}}</h2>
+        <h3>{{i['money']['price']}} {{i['money']['priceNote']}} {{i['money']['includeTaxDesc']}} </h3>
+        <p class="card-text">Оценка - {{i['score']['number']}} {{i['score']['hover']}} {{i['score']['desc']}}</p>
+        <img *ngIf="i['comment']['imageUrlTA']" src="{{i['comment']['imageUrlTA']}}">
+        <a mat-raised-button type="button" style="margin-left: 10px" class="btn btn-light" [href]="'https://ru.trip.com/hotels/moscow-hotel-detail-'+i['base']['hotelId']">Перейти на сайт</a>
+      </div>
+    </div>
+  </div>
+</div>

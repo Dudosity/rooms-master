@@ -1,0 +1,12 @@
+<div class="row row-cols-1 row-cols-md-3" >
+  <div *ngFor="let i of rooms_object"  class="col mb-4 ">
+    <div class="card h-100 shadow-sm">
+      <img src="{{i['offer']['photos'][0]['full']}}" style="  object-fit: cover; height: 300px;" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h2 class="card-title">{{i['offer']['formattedFullInfo']}}</h2>
+        <p class="card-text">{{i['offer']['formattedAdditionalInfo']}}</p>
+        <a mat-raised-button type="button"  style="margin-left: 10px" class="btn btn-light" [href]="i['offer']['siteUrl']">Снять за {{i['offer']['formattedShortPrice']}}</a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,20 @@
+
+<div class="container-fluid" >
+  <div class="container">
+    <app-header></app-header>
+    <app-ad-line></app-ad-line>
+  </div>
+    <mat-tab-group mat-align-tabs="center">
+    <mat-tab label="Квартиры" >
+      <div class="container">
+      <app-rooms class="container" ></app-rooms>
+      </div>
+    </mat-tab>
+    <mat-tab label="Отели" >
+      <div class="container">
+      <app-hotels class="container"></app-hotels>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+<app-footer></app-footer>
