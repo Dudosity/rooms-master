@@ -20,7 +20,5 @@ export class HotelsComponent implements OnInit {
     });
   }
 
-  GoToHotel(hotelid: number) {
-    window.location.href = 'https://ru.trip.com/hotels/moscow-hotel-detail-' + hotelid;
-  }
+
 }

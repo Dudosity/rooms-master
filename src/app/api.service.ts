@@ -19,6 +19,7 @@ export class APIService {
   url = 'https://api.wherehome.tech/';
   url_cian = this.url;
   url_trip = this.url + 'hotels';
+  url_n1 = this.url + 'getn1';
 
   public getcian(){
     return this.httpClient.get(this.url_cian);
@@ -27,6 +28,6 @@ export class APIService {
     return this.httpClient.get(this.url_trip);
   }
   public getn1(){
-    return 0
+    return this.httpClient.get(this.url_n1);
   }
 }

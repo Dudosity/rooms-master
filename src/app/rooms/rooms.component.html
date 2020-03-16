@@ -1,12 +1,30 @@
-<div class="row row-cols-1 row-cols-md-3" >
-  <div *ngFor="let i of rooms_object"  class="col mb-4 ">
-    <div class="card h-100 shadow-sm">
+<div class="card-columns" >
+
+  <div *ngFor="let i of rooms_object index as index1;"  >
+  <div *ngFor="let j of rooms_object_n1 index as index2;" >
+      <div class="col mb-4 ">
+      <div *ngIf="index1 == index2 && index2%2 ==0" class="card shadow-sm">
       <img src="{{i['offer']['photos'][0]['full']}}" style="  object-fit: cover; height: 300px;" class="card-img-top" alt="...">
-      <div class="card-body">
+      <div class="card-body" style="height: 150px">
         <h2 class="card-title">{{i['offer']['formattedFullInfo']}}</h2>
         <p class="card-text">{{i['offer']['formattedAdditionalInfo']}}</p>
-        <a mat-raised-button type="button"  style="margin-left: 10px" class="btn btn-light" [href]="i['offer']['siteUrl']">Снять за {{i['offer']['formattedShortPrice']}}</a>
+
       </div>
+        <a mat-raised-button type="button"  style="margin-left: 10px;  margin-bottom: 15px;" class="btn btn-light" [href]="i['offer']['siteUrl']">Снять за {{i['offer']['formattedShortPrice']}}</a>
+
+      </div>
+
+      <div *ngIf="index1 == index2 && index2%2 ==1" class="card shadow-sm">
+      <img src="{{j['main_photo']['1200x900p']}}" style="  object-fit: cover; height: 300px;" class="card-img-top" alt="...">
+      <div class="card-body" style="height: 150px">
+        <h2 class="card-title">{{j['params']['rooms_count']}}-комн. {{j['params']['type']['title']}} , {{j['params']['floor']}}/{{j['params']['floors_count']}} этаж</h2>
+        <p class="card-text">{{j['params']['description'].substring(0, 55)}}...</p>
+      </div>
+
+        <a mat-raised-button type="button"  style="margin-left: 10px; margin-bottom: 15px;" class="btn btn-light" [href]="'https://'+j['url']">Снять за {{j['params']['price']}} ₽/мес</a>
+
+    </div>
     </div>
   </div>
+</div>
 </div>
