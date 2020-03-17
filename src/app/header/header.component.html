@@ -16,7 +16,15 @@
     <div class="row h-100 align-items-center">
       <div class="col-12 text-center" style="color: white">
         <h1 class="font-weight-light">Где жить?</h1>
-        <p class="lead">Самое дешевое и доступное в Санкт-Петербурге &#9962;</p>
+        <span class="lead">Самое дешевое и доступное в
+          <div ngbDropdown class="d-inline-block" style="vertical-align: center">
+        <button class="btn btn-outline-primary"  style="color: white; border-color: white;" ngbDropdownToggle>{{selected_city}}</button>
+        <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+          <button ngbDropdownItem routerLink="/" (click)="chage_city()">Санкт-Петербурге</button>
+          <button ngbDropdownItem routerLink="/msc" >Москве</button>
+          <button ngbDropdownItem routerLink="/vvo" >Владивостоке</button>
+        </div>
+      </div> &#9962;</span>
 
       </div>
     </div>

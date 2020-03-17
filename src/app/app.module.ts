@@ -18,9 +18,13 @@ import {MatMenuModule} from '@angular/material/menu';
 import { FooterComponent } from './footer/footer.component';
 import { AdLineComponent } from './ad-line/ad-line.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 
 const appRoutes: Routes =[
-  { path: '', component: AppComponent}
+  { path: '', component: AppComponent},
+  { path: 'vvo', component: AppComponent},
+  { path: 'msc', component: AppComponent}
 ];
 
 @NgModule({
@@ -40,12 +44,15 @@ const appRoutes: Routes =[
     MatCardModule,
     MatIconModule,
     MatMenuModule,
+    NgbModule,
     MatPaginatorModule,
     MatToolbarModule,
     MatSelectModule,
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
+      {
+        onSameUrlNavigation: 'reload',
+        enableTracing: false } // <-- debugging purposes only
     ),
     HttpClientModule
   ],

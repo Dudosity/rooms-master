@@ -22,6 +22,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/assets/cian-logo.png",
               "src/sitemap.xml",
               "src/robots.txt"
             ],
